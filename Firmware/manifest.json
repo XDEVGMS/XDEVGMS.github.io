@@ -1,0 +1,27 @@
+{
+    "name": "ESP32 WebKey 1.20.1 GMS",
+    "builds": [
+        {
+            "chipFamily": "ESP32-S2",
+            "new_install_prompt_erase": true,
+            "parts": [
+                {
+                    "path": "ESP32_WebKey_HOST_AP_1.20.1_OFW900_GMS.ino.bootloader.bin",
+                    "offset": 4096
+                },
+                {
+                    "path": "boot_app0.bin",
+                    "offset": 57344
+                },
+                {
+                    "path": "ESP32_WebKey_HOST_AP_1.20.1_OFW900_GMS.ino.partitions.bin",
+                    "offset": 32768
+                },
+                {
+                    "path": "ESP32_WebKey_HOST_AP_1.20.1_OFW900_GMS.ino.bin",
+                    "offset": 65536
+                }
+            ]
+        }
+    ]
+}
