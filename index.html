@@ -1,47 +1,59 @@
-<head>
-<meta charset="UTF-8">
 <!DOCTYPE html>
+<html>
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/ico" href='favicon.ico' sizes="16x16">
+<title>Instalador WebKey XDEV</title>
 
-  <link rel="stylesheet" href="style.css">
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<style>
+body {
+    background-color: #ff8c00;
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+.button {
+		background-color:  #e67e22;
+		font-size: 20px;
+    color: white;
+		padding: 2px;
+		width: 100px;
+}
+hr {
+  color: black;
+  border: 2px solid black;
+  border-radius: 50px;
+  width: 400px;
+  margin: 0 auto;
+}
+.cornice {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  position: relative; 
+  top: -115px; 
+  left: 170px;
+}
+
+</style>
 </head>
-
 <body>
-	<body style="background-color:#21252B;">
-</body>
-    <section id="home">
-  <div class="container">
-		<p>
-  <center>
-<br><br>
-    <FONT COLOR="white"><h1>Instalador Web ESP32-S2 WebKey GMS</h1><br><br>
-       
-	  <p><b>Nota: </b>Puede administrar el dispositivo via WiFi y
-         navegando hacia la interfaz web <a href=""http://10.1.1.1/admin.html" style="color:#e67e22;">http://10.1.1.1/admin.html</a>
-		 <p><b>Nombre Wifi: PS4-HOST-AP </a><br>
-		 <p><b>Clave Wifi: password </a><br>
-    </p>
-
-
-	  
-<section id="install">
-  <div class="container">
-	  <div id="main" style="display: none;">
-	  <h1>Install</h1>
-        <script
-            type="module"
-            src="https://unpkg.com/esp-web-tools@7.1.0/dist/web/install-button.js?module"></script>
-        <esp-web-install-button id="installButton" manifest="Firmware/manifest.json"></esp-web-install-button>
-        <br><br><br><br>
-         <p><b>Nota:</b> Cierre el IDE de Arduino o cualquier programa que use el puerto COM o el instalador Web no funcionara!</p>
+  <br><br>
+  <body style="background-color:#21252B;">
+    <center><FONT COLOR="white"><h1>Instalador Web ESP32-S2<br> WebKey XDEV</h1><br><center>
+	<div id="blink"><center><FONT COLOR="#e67e22"><h4>= Firmware WebKey v1.20.1 =</FONT></h4><center></div><br>
+    <div id="main" style="display: none;">
+<br>
+<script type="text/javascript">var blink = document.getElementById('blink');setInterval(function() { blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);}, 1000);</script>
+<script type="module"src="https://unpkg.com/esp-web-tools@9.2.1/dist/web/install-button.js?module"></script>
+        <esp-web-install-button id="installButton" manifest="Firmware/manifest.json">
+		<button slot="activate" class="button"> Conectar </button> </esp-web-install-button>
+        <br><br>
     </div>
-	    <div id="notSupported" style="display: none;">
-		Su navegador no es compatible con la API Web Serial. Pruebe el navegador Chrome m·s reciente (versiÛn 98.0.4758.102 (compilaciÛn oficial) o Microsoft Edge con base chromium (64 bits)
-	    </div>
-	</div>
-</section>  
-
+    <div id="notSupported" style="display: none;">
+        Su navegador no es compatible con la API Web Serial. Pruebe el navegador Chrome m√°s reciente <br> (versi√≥n 98.0.4758.102 (compilaci√≥n oficial) o Microsoft Edge con base chromium (64 bits)</div>
+		
 
     <script>
         if(navigator.serial){
@@ -52,10 +64,11 @@
             document.getElementById("main").style.display = 'none';
         }
     </script>
+<center><br><h5>Wifi SSID:&nbsp PS4-HOST-AP<br>PASSWORD:&nbsp password</h5></center><br><br><br><br>
 
+<footer>
+<p> WebKey <a href="https://sourceforge.net/projects/esp32-s2-mini/files/UpdateFw/" style="color:#e67e22;"> Repositorio ESP32-S2</a> Para actualizaciones.</p>
+
+</footer>
 </body>
-<script src="main.js"></script>
-<br>
-<footer><p> WebKey <a href=""https://sourceforge.net/projects/esp32-s2-mini/" style="color:#e67e22;">Repositorio ESP32-S2</a> Para actualizaciones.</p></footer>
-		
 </html>
