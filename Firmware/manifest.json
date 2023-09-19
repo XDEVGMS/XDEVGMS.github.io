@@ -1,5 +1,5 @@
 {
-    "name": "ESP32 WebKey 1.20.1 GMS",
+    "name": "WebKey XDEV 1.20.1",
     "builds": [
         {
             "chipFamily": "ESP32-S2",
