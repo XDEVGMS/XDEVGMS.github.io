@@ -6,7 +6,7 @@
             "new_install_prompt_erase": true,
             "parts": [
                 {
-                    "path": "ESP32_WebKey_HOST_AP_1.21.0_OFW900_XDEV.ino.bootloader.bin",
+                    "path": "ESP32_WebKey_HOST_AP_1.21.0_OFW900_GMS.ino.bootloader.bin",
                     "offset": 4096
                 },
                 {
@@ -14,11 +14,11 @@
                     "offset": 57344
                 },
                 {
-                    "path": "ESP32_WebKey_HOST_AP_1.21.0_OFW900_XDEV.ino.partitions.bin",
+                    "path": "ESP32_WebKey_HOST_AP_1.21.0_OFW900_GMS.ino.partitions.bin",
                     "offset": 32768
                 },
                 {
-                    "path": "ESP32_WebKey_HOST_AP_1.21.0_OFW900_XDEV.ino.bin",
+                    "path": "ESP32_WebKey_HOST_AP_1.21.0_OFW900_GMS.ino.bin",
                     "offset": 65536
                 }
             ]
